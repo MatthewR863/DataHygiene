@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="773.0" prefWidth="789.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <Pane prefHeight="244.0" prefWidth="789.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="12.0" layoutY="-47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="219.0" prefWidth="329.0" style="-fx-background-color: white;">
+               <children>
+                  <Label prefHeight="31.0" prefWidth="329.0" style="-fx-background-color: Blue;" text="Scan Summary -------------------------" textFill="WHITE">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="archiveCheck" layoutX="14.0" layoutY="42.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="142.0" text="Renamed Files: 560" textFill="#034668" />
+                  <CheckBox fx:id="archiveCheck" layoutX="14.0" layoutY="73.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="161.0" text="Metadata Updated: 320" textFill="#034668" />
+                  <CheckBox fx:id="archiveCheck" layoutX="14.0" layoutY="103.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="151.0" text="Files Organized: 850" textFill="#034668" />
+                  <CheckBox fx:id="archiveCheck" layoutX="14.0" layoutY="132.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="188.0" text="Irrelevant File Removed: 210" textFill="#034668" />
+                  <CheckBox fx:id="archiveCheck" layoutX="14.0" layoutY="159.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="138.0" text="Files Archived: 112" textFill="#034668" />
+                  <Button layoutX="187.0" layoutY="168.0" mnemonicParsing="false" onAction="#applyCorrections" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: Blue;" text="Apply Corrections" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Pane layoutX="366.0" layoutY="-46.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="181.0" prefWidth="423.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutY="-2.0" prefHeight="33.0" prefWidth="425.0" style="-fx-background-color: blue;" text="Preview Changes ------------------------------------" textFill="WHITE">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="previewArea" layoutX="14.0" layoutY="44.0" prefHeight="17.0" prefWidth="332.0" text="Old: report_v1.docx --&gt; New: Report_2022_fianl.docx" textFill="#034668" />
+                  <Label fx:id="previewArea" layoutX="14.0" layoutY="77.0" prefHeight="17.0" prefWidth="316.0" text="Old: image123.jpg --&gt; New: Marketing_Ad_image.jpg" textFill="#034668" />
+                  <Label fx:id="previewArea" layoutX="14.0" layoutY="110.0" prefHeight="17.0" prefWidth="290.0" text="Old: notes.txt --&gt; New: Meeting_Notes_2021.txt" textFill="#034668" />
+                  <Label layoutX="38.0" layoutY="150.0" prefHeight="17.0" prefWidth="161.0" text="Arcgived: backup_2018.zip" textFill="#034668" />
+                  <Label layoutX="14.0" layoutY="127.0" text="----------------------------------------------------------------------" />
+                  <Label layoutX="193.0" layoutY="150.0" prefHeight="17.0" prefWidth="147.0" text="moved to Archive folder." textFill="#a19a9a" />
+                  <Button layoutX="291.0" layoutY="169.0" mnemonicParsing="false" onAction="#viewLog" prefHeight="32.0" prefWidth="127.0" style="-fx-background-color: BLue;" text="View Log File" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding>
+                  </Button>
+                  <ImageView fitHeight="16.0" fitWidth="24.0" layoutX="14.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Screenshot%202026-03-13%20at%2019.29.57.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="17.0" fitWidth="82.0" layoutX="299.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Screenshot%202026-03-13%20at%2019.29.21.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="14.0" layoutY="172.0" text="-----------------------------------------------------------------------------------------------------------------------------------------" />
+            <Label layoutX="14.0" layoutY="200.0" text="Output Directory: " />
+            <Button layoutX="640.0" layoutY="191.0" mnemonicParsing="false" onAction="#exportResults" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: Blue;" text="Export Results" textFill="WHITE" />
+            <MenuButton layoutX="117.0" layoutY="196.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="509.0" text="C:\Users\Documents\Project_Files_Cleaned">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+            </MenuButton>
+         </children>
+      </Pane>
+   </bottom>
+   <left>
+      <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="209.0" prefWidth="384.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="6.0" layoutY="6.0" nodeOrientation="LEFT_TO_RIGHT" text="Data Hygiene Rules ---------------------------------" textFill="#16188a">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="archiveCheck" layoutX="14.0" layoutY="33.0" mnemonicParsing="false" text="Apply File Naming Conventions" textFill="#034668" />
+            <CheckBox fx:id="archiveCheck" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" text="Update File Metadata" textFill="#034668" />
+            <CheckBox fx:id="archiveCheck" layoutX="14.0" layoutY="87.0" mnemonicParsing="false" text="Organize Files by Category" textFill="#034668" />
+            <CheckBox fx:id="archiveCheck" layoutX="14.0" layoutY="113.0" mnemonicParsing="false" text="Remove Irrelevant Files" textFill="#034668" />
+            <CheckBox fx:id="archiveCheck" layoutX="14.0" layoutY="138.0" mnemonicParsing="false" text="Archive Outdated Files" textFill="#034668" />
+            <CheckBox fx:id="archiveCheck" layoutX="14.0" layoutY="163.0" mnemonicParsing="false" text="Custom Rules" textFill="#034668" />
+         </children>
+         <BorderPane.margin>
+            <Insets left="13.0" />
+         </BorderPane.margin>
+      </Pane>
+   </left>
+   <right>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="209.0" prefWidth="376.0" style="-fx-background-color: blue;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="8.0" layoutY="6.0" text="Scan Progress --------------------------------------" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="scanProgress" layoutX="14.0" layoutY="35.0" prefHeight="35.0" prefWidth="354.0" progress="0.0" />
+            <Label layoutX="117.0" layoutY="44.0" text="Scanning Files..." />
+            <Label layoutX="14.0" layoutY="70.0" text="----------------------------------------------------------------" textFill="WHITE" />
+            <Label fx:id="filesScanned" layoutX="14.0" layoutY="96.0" prefHeight="17.0" prefWidth="139.0" text="Files Scanned: 3,280" textFill="WHITE" />
+            <Label fx:id="filesUpdated" layoutX="14.0" layoutY="120.0" text="Files Updated: 1,024" textFill="WHITE" />
+            <Label layoutX="14.0" layoutY="144.0" text="----------------------------------------------------------------" textFill="WHITE" />
+            <Label fx:id="etaLabel" layoutX="14.0" layoutY="161.0" text="ETA: 00:02:15" textFill="WHITE" />
+            <ImageView fitHeight="25.0" fitWidth="58.0" layoutX="22.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: Green;">
+               <image>
+                  <Image url="@../../Screenshot%202026-03-13%20at%2019.29.38.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </right>
+   <top>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="113.0" prefWidth="755.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="26.0" prefHeight="20.0" prefWidth="176.0" text="Select Directory to Scan:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <MenuButton fx:id="directoryBox" layoutX="194.0" layoutY="22.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="421.0" text="C:\Users|Documents\Project_Files">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+            </MenuButton>
+            <Button layoutX="628.0" layoutY="21.0" mnemonicParsing="false" onAction="#browseDirectory" prefHeight="28.0" prefWidth="95.0" style="-fx-background-color: Blue;" text="Browse" textFill="#f8f8f8" />
+            <Button layoutX="268.0" layoutY="64.0" mnemonicParsing="false" onAction="#runScan" prefHeight="35.0" prefWidth="203.0" style="-fx-background-color: Blue;" text="Run Scan" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets top="65.0" />
+         </BorderPane.margin>
+      </Pane>
+   </top>
+</BorderPane>
